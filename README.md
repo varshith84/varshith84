@@ -27,13 +27,18 @@ An AI assistant that works with uploaded documents. Built on the Inflow AI RAG f
 
 **Built with:** Python · FastAPI · React · TypeScript · LangChain · LangGraph · FAISS · SQLite
 
-### 03 / [Flight Delay Operations Intelligence](https://github.com/varshith84/flight-delay-operations-intelligence)
+### 03 / [Brain Tumor Project · AI Medical Image Assistant](https://github.com/varshith84/brain-tumor-detection)
+
+An academic image-classification application with image uploads, ResNet-50 predictions, Grad-CAM visualizations, local patient and scan-history management, dashboard summaries, PDF reports, and a rule-based chatbot. The current source includes a synthetic three-class demonstration (Normal, Pneumonia, Tumor).
+
+**Built with:** React · FastAPI · PyTorch · torchvision · ResNet-50 · Grad-CAM · SQLite · ReportLab
+
+### 04 / [Flight Delay Operations Intelligence](https://github.com/varshith84/flight-delay-operations-intelligence)
 
 A reusable analytics tool that turns flight CSV files into departure-delay metrics, airport and carrier rankings, route risk tables, and optional charts. Includes a small synthetic demo and automated tests.
 
 **Built with:** Python · pandas · Matplotlib · command-line tooling
 
-**Also explored:** Brain Tumor Detection — an academic MRI classification application using transfer learning with ResNet-50, Flask, React, and MySQL. Public source is pending.
 
 ## Technical toolkit
 
@@ -42,7 +47,7 @@ A reusable analytics tool that turns flight CSV files into departure-delay metri
 | Languages | Python, SQL, Java, JavaScript, TypeScript |
 | Web & APIs | React, Spring Boot, Flask, FastAPI, REST APIs, HTML/CSS |
 | Data | MySQL, SQLite, pandas |
-| AI & retrieval | CNNs, transfer learning, LLMs, RAG, LangChain, LangGraph, FAISS |
+| AI & retrieval | PyTorch, torchvision, CNNs, transfer learning, Grad-CAM, LLMs, RAG, LangChain, LangGraph, FAISS |
 | Development | Git, GitHub, Docker Compose, Postman, VS Code, PyCharm |
 | Foundations | Data structures & algorithms, OOP, DBMS, operating systems |
 
