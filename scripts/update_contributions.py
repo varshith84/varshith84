@@ -10,6 +10,8 @@ from pathlib import Path
 import re
 import urllib.request
 
+from profile_visuals import render_activity
+
 
 class CalendarParser(HTMLParser):
     def __init__(self):
@@ -64,43 +66,7 @@ class CalendarParser(HTMLParser):
 
 
 def render(days, retrieved):
-    colors = ["#24131D", "#451126", "#701A3D", "#C77B9B", "#E5B5C7"]
-    first = date.fromisoformat(days[0]["date"])
-    sunday = first - timedelta(days=(first.weekday() + 1) % 7)
-    total = sum(day["count"] for day in days)
-    parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-labelledby="vc-title vc-desc">',
-        '<title id="vc-title">Public GitHub contribution calendar for varshith84</title>',
-        f'<desc id="vc-desc">Genuine GitHub contribution data from {days[0]["date"]} to {days[-1]["date"]}. Retrieved {escape(retrieved)}. {total} contributions in this displayed range.</desc>',
-        '<rect width="1200" height="310" rx="18" fill="#10070C"/>',
-        '<rect x=".5" y=".5" width="1199" height="309" rx="18" fill="none" stroke="#451126"/>',
-        '<g font-family="Arial,Helvetica,sans-serif">',
-        '<text x="40" y="43" fill="#F8F0F3" font-size="21">A year of building</text>',
-        f'<text x="1160" y="42" text-anchor="end" fill="#E5B5C7" font-size="14">{total:,} public contributions</text>',
-    ]
-    months = set()
-    for day in days:
-        value = date.fromisoformat(day["date"])
-        column, row = divmod((value - sunday).days, 7)
-        x, y = 80 + column * 20, 87 + row * 20
-        month_key = (value.year, value.month)
-        if month_key not in months and (value.day <= 7 or not months):
-            parts.append(f'<text x="{x}" y="73" font-size="12" fill="#C77B9B">{value.strftime("%b")}</text>')
-            months.add(month_key)
-        parts.append(
-            f'<rect x="{x}" y="{y}" width="15" height="15" rx="3" fill="{colors[day["level"]]}"><title>{day["date"]}: {day["count"]} contributions</title></rect>'
-        )
-    for label, row in [("Mon", 1), ("Wed", 3), ("Fri", 5)]:
-        parts.append(f'<text x="40" y="{98 + row * 20}" fill="#C77B9B" font-size="11">{label}</text>')
-    parts.extend([
-        f'<text x="40" y="262" fill="#E5B5C7" font-size="13">{days[0]["date"]} — {days[-1]["date"]}</text>',
-        f'<text x="40" y="286" fill="#C77B9B" font-size="11">Source: GitHub public calendar · Retrieved {escape(retrieved)} · Dated snapshot</text>',
-        '<text x="944" y="274" fill="#C77B9B" font-size="12">Less</text>',
-    ])
-    for index, color in enumerate(colors):
-        parts.append(f'<rect x="{980 + index * 20}" y="262" width="15" height="15" rx="3" fill="{color}"/>')
-    parts.extend(['<text x="1088" y="274" fill="#C77B9B" font-size="12">More</text>', '</g></svg>'])
-    return "\n".join(parts) + "\n"
+    return render_activity(days, retrieved)
 
 
 def main():
@@ -132,8 +98,9 @@ def main():
     data = {"username": "varshith84", "source": "https://github.com/users/varshith84/contributions", "retrieved_date_utc": retrieved, "days": days}
     # Validate and render everything before replacing either last-good output.
     svg = render(days, retrieved)
+    mobile_svg = render_activity(days, retrieved, mobile=True)
     payload = json.dumps(data, indent=2) + "\n"
-    for path, content in [(assets / "contributions.svg", svg), (assets / "contributions.json", payload)]:
+    for path, content in [(assets / "contributions.svg", svg), (assets / "contributions-mobile.svg", mobile_svg), (assets / "contributions.json", payload)]:
         temporary = path.with_suffix(path.suffix + ".tmp")
         temporary.write_text(content, encoding="utf-8")
         temporary.replace(path)
@@ -142,3 +109,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
