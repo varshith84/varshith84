@@ -4,6 +4,7 @@
 </picture>
 
 <p align="center">
+  <a href="#user-content-recruiter"><kbd>00 CODE TOURS</kbd></a> &nbsp;
   <a href="#user-content-about"><kbd>01 ABOUT</kbd></a> &nbsp;
   <a href="#user-content-selected-work"><kbd>02 PROJECTS</kbd></a> &nbsp;
   <a href="#user-content-toolkit"><kbd>03 TOOLKIT</kbd></a> &nbsp;
@@ -12,9 +13,56 @@
 </p>
 
 <p align="center">
+  <a href="https://varshith-sai-portfolio-varshith84s-projects.vercel.app/"><b>Explore my portfolio ↗</b></a> &nbsp; / &nbsp;
   <a href="https://www.linkedin.com/in/pasupuleti-varshith-sai/">LinkedIn ↗</a> &nbsp; / &nbsp;
   <a href="https://github.com/varshith84?tab=repositories">All repositories ↗</a>
 </p>
+
+<a id="recruiter"></a>
+
+<picture>
+  <source media="(max-width: 640px)" srcset="assets/recruiter-mobile.svg" />
+  <img src="assets/recruiter.svg" width="100%" alt="Recruiter quick scan: choose an expandable code tour for full-stack and APIs, applied AI, or Python and data. Each track links to concrete source files." />
+</picture>
+
+<details>
+<summary><b>01 · I'm hiring for full-stack development / backend APIs</b></summary>
+
+**Start with SwiftShare.** Trace the interface through the backend to storage:
+
+1. [React file-sharing interface](https://github.com/varshith84/File-Sharing/blob/main/sdp-frontend/src/Pages/PassShare.jsx)
+2. [Spring Boot file controller](https://github.com/varshith84/File-Sharing/blob/main/sdp-backend/src/main/java/com/klef/sdp/controller/FileController.java) → [service implementation](https://github.com/varshith84/File-Sharing/blob/main/sdp-backend/src/main/java/com/klef/sdp/service/FileServiceImpl.java)
+3. [Docker Compose setup](https://github.com/varshith84/File-Sharing/blob/main/docker-compose.yml)
+
+**Interview conversation:** how the UI, REST endpoints, service layer, and database work together; tradeoffs in sharing files between users.
+
+</details>
+
+<details>
+<summary><b>02 · I'm hiring for applied AI / Python engineering</b></summary>
+
+**Start with TaskPilot.** Follow the agent's decision path:
+
+1. [Architecture overview](https://github.com/varshith84/TaskPilot/blob/main/ARCHITECTURE.md)
+2. [LangGraph orchestration](https://github.com/varshith84/TaskPilot/blob/main/backend/app/agent/graph.py) → [retrieval, summarization, and search tools](https://github.com/varshith84/TaskPilot/tree/main/backend/app/tools)
+3. [Agent tests](https://github.com/varshith84/TaskPilot/blob/main/backend/tests/test_agent.py)
+
+**Interview conversation:** tool selection, retrieval context, source references, and the limits of generated answers.
+
+</details>
+
+<details>
+<summary><b>03 · I'm hiring for Python / data analytics</b></summary>
+
+**Start with Flight Delay Operations Intelligence.** Follow the input-to-output workflow:
+
+1. [Command-line entry points](https://github.com/varshith84/flight-delay-operations-intelligence/blob/main/flight_delay/cli.py)
+2. [Analysis implementation](https://github.com/varshith84/flight-delay-operations-intelligence/blob/main/flight_delay/analysis.py)
+3. [CLI tests](https://github.com/varshith84/flight-delay-operations-intelligence/blob/main/tests/test_cli.py) → [sample outputs](https://github.com/varshith84/flight-delay-operations-intelligence/tree/main/outputs)
+
+**Interview conversation:** CSV validation, grouping and aggregation, reproducible outputs, and edge cases.
+
+</details>
 
 <a id="about"></a>
 
@@ -80,7 +128,7 @@
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/credentials-mobile.svg" />
-  <img src="assets/credentials.svg" width="100%" alt="Certifications: Salesforce Certified AI Associate, issued by Salesforce; Cambridge English Linguaskill, an English language proficiency certification." />
+  <img src="assets/credentials.svg" width="100%" alt="Five completed certifications: Microsoft Certified Azure AI Engineer Associate (AI-102); Salesforce Certified AI Associate; ServiceNow Certified Implementation Specialist – Data Foundations (CMDB &amp; CSDM); MongoDB Associate Developer; Cambridge English Linguaskill." />
 </picture>
 
 <a href="https://www.linkedin.com/in/pasupuleti-varshith-sai/">
@@ -114,9 +162,12 @@ Final-year B.Tech Computer Science and Engineering student at **KL University**,
 
 ### Certifications
 
+- Microsoft Certified: Azure AI Engineer Associate (AI-102) — Microsoft.
 - Salesforce Certified AI Associate — Salesforce.
+- ServiceNow Certified Implementation Specialist – Data Foundations (CMDB & CSDM) — ServiceNow.
+- MongoDB Associate Developer — MongoDB.
 - Cambridge English Linguaskill — English language proficiency certification.
 
-**[Connect on LinkedIn](https://www.linkedin.com/in/pasupuleti-varshith-sai/)** · **[Browse repositories](https://github.com/varshith84?tab=repositories)**
+**[Explore my portfolio](https://varshith-sai-portfolio-varshith84s-projects.vercel.app/)** · **[Connect on LinkedIn](https://www.linkedin.com/in/pasupuleti-varshith-sai/)** · **[Browse repositories](https://github.com/varshith84?tab=repositories)**
 
 </details>

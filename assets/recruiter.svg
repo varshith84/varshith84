@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="pv-title pv-description">
+<title id="pv-title">Recruiter quick scan — choose a full-stack, applied AI, or Python and data code tour</title><desc id="pv-description">Recruiter quick scan — choose a full-stack, applied AI, or Python and data code tour</desc>
+<defs>
+<linearGradient id="pv-wine" x2="1" y2="1"><stop stop-color="#23101E"/><stop offset=".55" stop-color="#451126"/><stop offset="1" stop-color="#771F48"/></linearGradient>
+<linearGradient id="pv-soft" x2="1" y2=".7"><stop stop-color="#24101D"/><stop offset="1" stop-color="#140D16"/></linearGradient>
+<linearGradient id="pv-stroke"><stop stop-color="#70334F"/><stop offset=".5" stop-color="#E5B5C7"/><stop offset="1" stop-color="#70334F"/></linearGradient>
+<radialGradient id="pv-halo"><stop stop-color="#BB477A" stop-opacity=".35"/><stop offset="1" stop-color="#BB477A" stop-opacity="0"/></radialGradient>
+<pattern id="pv-grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#E5B5C7" stroke-opacity=".045"/></pattern>
+<clipPath id="pv-portrait"><rect x="0" y="0" width="240" height="288" rx="110"/></clipPath>
+</defs>
+<style>
+@keyframes pv-blink{0%,45%{opacity:1}50%,95%{opacity:.15}100%{opacity:1}}
+@keyframes pv-pulse{0%,100%{opacity:.4}50%{opacity:.95}}
+.cursor{animation:pv-blink 1.8s steps(1) infinite}.pulse{animation:pv-pulse 4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.motion{display:none}.cursor,.pulse{animation:none}}
+</style>
+<rect width="1200" height="300" fill="#0F0B12"/>
+<rect x="1" y="1" width="1198" height="298" rx="16" fill="url(#pv-soft)" stroke="#583044" /><text x="40" y="40" fill="#E5B5C7" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2">QUICK SCAN / RECRUITER CODE TOURS</text><text x="38" y="100" fill="#F8F0F3" font-family="Georgia,Times,serif" font-size="49" >Choose a role. Follow the code.</text><rect x="40" y="144" width="364" height="113" rx="10" fill="#25121F" stroke="#583044" /><text x="56" y="174" fill="#E5B5C7" font-family="monospace" font-size="13" >01</text><text x="92" y="175" fill="#F8F0F3" font-family="Arial,Helvetica,sans-serif" font-size="23" >Full-stack &amp; APIs</text><text x="57" y="220" fill="#B79BAA" font-family="Arial,Helvetica,sans-serif" font-size="15" >SwiftShare / React + Spring Boot</text><rect x="418" y="144" width="364" height="113" rx="10" fill="#25121F" stroke="#583044" /><text x="434" y="174" fill="#E5B5C7" font-family="monospace" font-size="13" >02</text><text x="470" y="175" fill="#F8F0F3" font-family="Arial,Helvetica,sans-serif" font-size="23" >Applied AI</text><text x="435" y="220" fill="#B79BAA" font-family="Arial,Helvetica,sans-serif" font-size="15" >TaskPilot / LangGraph + RAG</text><rect x="796" y="144" width="364" height="113" rx="10" fill="#25121F" stroke="#583044" /><text x="812" y="174" fill="#E5B5C7" font-family="monospace" font-size="13" >03</text><text x="848" y="175" fill="#F8F0F3" font-family="Arial,Helvetica,sans-serif" font-size="23" >Python &amp; data</text><text x="813" y="220" fill="#B79BAA" font-family="Arial,Helvetica,sans-serif" font-size="15" >Flight analytics / CLI + tests</text><text x="40" y="276" fill="#E5B5C7" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="1">EXPAND A TRACK BELOW TO INSPECT THE SOURCE ↓</text>
+</svg>

@@ -57,12 +57,12 @@ def about(mobile=False):
         c.append(text(x + 23, y + 86 + i * (34 if mobile else 31), value, 19 if mobile else 20, color, family="monospace"))
     c.append(text(x + 23, y + th - 20, "$ ready_to_build", 16, ROSE, family="monospace"))
     c.append(rect(x + 188, y + th - 36, 8, 19, fill=ROSE, stroke="none", radius=0, **{"class": "cursor"}))
-    cards = [("8.72", "CURRENT CGPA", "KL University"), ("2027", "GRADUATING BATCH", "Full-time B.Tech CSE"), ("2", "CERTIFICATIONS", "AI + English proficiency")]
+    cards = [("8.72", "CURRENT CGPA", "KL University"), ("2027", "GRADUATING BATCH", "Full-time B.Tech CSE"), ("5", "CERTIFICATIONS", "Cloud AI · Data · English")]
     for i, (number, label, note) in enumerate(cards):
         if mobile:
             cx, cy, cw, ch = 28 + i * 184, 598, 176, 170
             c.extend([rect(cx, cy, cw, ch, fill="url(#pv-soft)"), serif(cx + 17, cy + 61, number, 39), text(cx + 17, cy + 96, label, 9.5, ROSE, letter_spacing=".6")])
-            notes = ["KL University", "Full-time CSE", "AI + English"]
+            notes = ["KL University", "Full-time CSE", "AI · Data · English"]
             c.append(text(cx + 17, cy + 129, notes[i], 13, MUTED))
         else:
             cx, cy, cw, ch = 827, 136 + i * 129, 333, 118
@@ -159,17 +159,39 @@ def toolkit(mobile=False):
 
 
 def credentials(mobile=False):
-    w, h = (600, 612) if mobile else (1200, 385)
+    w, h = (600, 1450) if mobile else (1200, 960)
     c = [eyebrow(28 if mobile else 40, 37, "05 / CREDENTIALS"), serif(28 if mobile else 40, 96, "Learning, made tangible.", 34 if mobile else 46)]
-    values = [(["Salesforce Certified", "AI Associate"], "SALESFORCE", "Artificial intelligence fundamentals"), (["Cambridge English", "Linguaskill"], "CAMBRIDGE ENGLISH", "English language proficiency")]
+    values = [
+        (["Microsoft Certified:", "Azure AI Engineer Associate"], "MICROSOFT", "AI-102 · Azure AI engineering"),
+        (["Salesforce Certified", "AI Associate"], "SALESFORCE", "Artificial intelligence fundamentals"),
+        (["Certified Implementation Specialist", "Data Foundations", "(CMDB & CSDM)"], "SERVICENOW", "Enterprise data foundations"),
+        (["MongoDB", "Associate Developer"], "MONGODB", "Document database development"),
+        (["Cambridge English", "Linguaskill"], "CAMBRIDGE ENGLISH", "English language proficiency"),
+    ]
     for i, (title, issuer, detail) in enumerate(values):
-        x, y, cw, ch = (28, 136 + i * 226, 544, 205) if mobile else (40 + i * 570, 143, 550, 206)
+        x, y, cw, ch = (28, 136 + i * 260, 544, 240) if mobile else (40 + (i % 2) * 570, 143 + (i // 2) * 266, 550, 240)
         c.extend([rect(x, y, cw, ch, fill="url(#pv-soft)"), eyebrow(x + 24, y + 33, f"0{i+1} / CERTIFICATION", 11)])
         for j, line in enumerate(title):
-            c.append(serif(x + 24, y + 80 + j * 37, line, 29))
-        c.extend([text(x + 24, y + 151, issuer, 11, ROSE, letter_spacing="1.3"), text(x + 24, y + 181, detail, 17, MUTED)])
+            c.append(serif(x + 24, y + 80 + j * 34, line, 26 if i == 2 else 29))
+        c.extend([text(x + 24, y + 187, issuer, 11, ROSE, letter_spacing="1.3"), text(x + 24, y + 218, detail, 17, MUTED)])
         c.append(path(f"M{x+cw-62} {y+36}l9 9 18-22", width=2))
-    return svg(w, h, "Certifications — Salesforce AI Associate and Cambridge English Linguaskill", c)
+    if not mobile:
+        c.extend([eyebrow(639, 727, "05 / CONTINUOUS LEARNING", 12), serif(637, 784, "Five credentials.", 37), text(640, 826, "Cloud AI, enterprise data, databases,", 19, MUTED), text(640, 857, "and clear communication.", 19, MUTED)])
+    return svg(w, h, "Five certifications — Microsoft, Salesforce, ServiceNow, MongoDB, and Cambridge English", c)
+
+
+def recruiter(mobile=False):
+    w, h = (600, 445) if mobile else (1200, 300)
+    c = [rect(1, 1, w-2, h-2, fill="url(#pv-soft)", radius=16), eyebrow(30 if mobile else 40, 40, "QUICK SCAN / RECRUITER CODE TOURS", 12), serif(28 if mobile else 38, 100, "Choose a role. Follow the code.", 33 if mobile else 49)]
+    lanes = [("01", "Full-stack & APIs", "SwiftShare / React + Spring Boot"), ("02", "Applied AI", "TaskPilot / LangGraph + RAG"), ("03", "Python & data", "Flight analytics / CLI + tests")]
+    for i, (number, title, detail) in enumerate(lanes):
+        x, y, cw, ch = (28, 132+i*88, 544, 73) if mobile else (40+i*378, 144, 364, 113)
+        c.append(rect(x,y,cw,ch,fill="#25121F",radius=10))
+        c.append(text(x+16,y+30,number,13,ROSE,family="monospace"))
+        c.append(text(x+52,y+31,title,22 if mobile else 23,INK))
+        c.append(text(x+52 if mobile else x+17,y+57 if mobile else y+76,detail,15, MUTED))
+    c.append(text(30 if mobile else 40,h-24,"EXPAND A TRACK BELOW TO INSPECT THE SOURCE ↓",12,ROSE,letter_spacing="1"))
+    return svg(w,h,"Recruiter quick scan — choose a full-stack, applied AI, or Python and data code tour",c)
 
 
 def footer(mobile=False):
@@ -187,13 +209,14 @@ def main():
         suffix = "-mobile" if mobile else ""
         write(f"hero{suffix}.svg", hero(mobile))
         write(f"about{suffix}.svg", about(mobile))
+        write(f"recruiter{suffix}.svg", recruiter(mobile))
         write(f"work-heading{suffix}.svg", section_title("02 / SELECTED WORK", "Built to be useful.", mobile=mobile))
         for item in PROJECTS:
             write(f"project-{item['file']}{suffix}.svg", project(item, mobile))
         write(f"toolkit{suffix}.svg", toolkit(mobile))
         write(f"credentials{suffix}.svg", credentials(mobile))
         write(f"footer{suffix}.svg", footer(mobile))
-    print("Built 20 desktop/mobile visual panels.")
+    print("Built 22 desktop/mobile visual panels.")
 
 
 if __name__ == "__main__":
