@@ -104,7 +104,7 @@ Final-year B.Tech Computer Science and Engineering student at **KL University**,
 - **[Brain tumor project / AI Medical Assistant](https://github.com/varshith84/brain-tumor-detection):** academic image-classification application using React, FastAPI, PyTorch, ResNet-50, Grad-CAM, SQLite, and ReportLab, with scan history, dashboard summaries, PDF reports, and a rule-based chatbot. The published version uses a synthetic three-class demonstration: Normal, Pneumonia, Tumor. It does not establish brain MRI or clinical diagnostic performance.
 - **[Flight Delay Operations Intelligence](https://github.com/varshith84/flight-delay-operations-intelligence):** reusable Python, pandas, and Matplotlib CLI for flight CSV analysis, departure-delay metrics, rankings, route-risk tables, and charts, with automated tests.
 
-### Toolkit
+### Technical stack
 
 - **Languages:** Python, Java, SQL, JavaScript, TypeScript.
 - **Web and APIs:** React, HTML/CSS, Vite, Spring Boot, FastAPI, Flask, REST APIs, WebSockets.
