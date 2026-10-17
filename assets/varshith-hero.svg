@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="450" viewBox="0 0 1200 450" role="img" aria-labelledby="vh-title vh-desc">
+  <title id="vh-title">Varshith Sai Pasupuleti</title>
+  <desc id="vh-desc">Aspiring software engineer. Full-stack development and applied AI. An animated burgundy banner with fine grid lines, orbital geometry, and a glowing path.</desc>
+  <defs>
+    <linearGradient id="vh-bg" x2="1" y2="1"><stop stop-color="#10070C"/><stop offset=".6" stop-color="#190B12"/><stop offset="1" stop-color="#451126"/></linearGradient>
+    <radialGradient id="vh-light"><stop stop-color="#C77B9B" stop-opacity=".25"/><stop offset="1" stop-color="#701A3D" stop-opacity="0"/></radialGradient>
+    <linearGradient id="vh-line"><stop stop-color="#701A3D"/><stop offset=".5" stop-color="#E5B5C7"/><stop offset="1" stop-color="#701A3D"/></linearGradient>
+    <pattern id="vh-grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#C77B9B" stroke-opacity=".08"/></pattern>
+    <clipPath id="vh-clip"><rect width="1200" height="450" rx="20"/></clipPath>
+    <filter id="vh-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <style>@media(prefers-reduced-motion:reduce){.vh-motion{display:none}}</style>
+  <g clip-path="url(#vh-clip)">
+    <rect width="1200" height="450" fill="url(#vh-bg)"/>
+    <rect width="1200" height="450" fill="url(#vh-grid)"/>
+    <ellipse cx="1020" cy="220" rx="430" ry="350" fill="url(#vh-light)"/>
+    <ellipse class="vh-motion" cx="990" cy="170" rx="250" ry="220" fill="url(#vh-light)"><animate attributeName="cx" values="990;1080;990" dur="18s" repeatCount="indefinite"/></ellipse>
+    <path d="M64 65h54m-54 0v20M1136 385h-54m54 0v-20" fill="none" stroke="#C77B9B" stroke-opacity=".55"/>
+    <g fill="#E5B5C7" font-family="Arial,Helvetica,sans-serif" font-size="13" letter-spacing="3">
+      <text x="65" y="112">VARSHITH84 / DEVELOPER PROFILE</text>
+    </g>
+    <text x="60" y="202" fill="#F8F0F3" font-family="Georgia,'Times New Roman',serif" font-size="74" letter-spacing="-2">Varshith Sai</text>
+    <text x="60" y="279" fill="#F8F0F3" font-family="Georgia,'Times New Roman',serif" font-size="74" letter-spacing="-2">Pasupuleti<tspan fill="#C77B9B">.</tspan></text>
+    <path d="M65 309H655" fill="none" stroke="url(#vh-line)" stroke-width="2"/>
+    <path class="vh-motion" d="M65 309H655" fill="none" stroke="#E5B5C7" stroke-width="2" stroke-dasharray="70 520"><animate attributeName="stroke-dashoffset" values="590;0;-590" dur="9s" repeatCount="indefinite"/></path>
+    <text x="65" y="350" fill="#F8F0F3" font-family="Arial,Helvetica,sans-serif" font-size="21">Aspiring Software Engineer</text>
+    <text x="65" y="382" fill="#E5B5C7" font-family="Arial,Helvetica,sans-serif" font-size="17">Full-Stack Development <tspan fill="#C77B9B"> / </tspan> Applied AI</text>
+    <g transform="translate(936 218)">
+      <circle r="144" fill="none" stroke="#C77B9B" stroke-opacity=".22"/>
+      <circle r="111" fill="none" stroke="#C77B9B" stroke-opacity=".28" stroke-dasharray="2 13"/>
+      <ellipse rx="174" ry="67" fill="none" stroke="#C77B9B" stroke-opacity=".43" transform="rotate(-38)"/>
+      <ellipse rx="174" ry="67" fill="none" stroke="#E5B5C7" stroke-opacity=".23" transform="rotate(38)"/>
+      <path d="M-63 0l29-29M-63 0l29 29M63 0L34-29M63 0L34 29M14-39L-14 39" stroke="#E5B5C7" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <circle cx="-114" cy="-88" r="5" fill="#E5B5C7"/>
+      <g class="vh-motion"><circle cx="144" r="14" fill="#C77B9B" filter="url(#vh-glow)" opacity=".5"/><circle cx="144" r="4" fill="#E5B5C7"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="32s" repeatCount="indefinite"/></g>
+      <text y="195" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2.5" fill="#E5B5C7">CODE / DATA / CURIOSITY</text>
+    </g>
+    <rect x=".5" y=".5" width="1199" height="449" rx="20" fill="none" stroke="#C77B9B" stroke-opacity=".3"/>
+  </g>
+</svg>
