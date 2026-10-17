@@ -4,11 +4,11 @@
 </picture>
 
 <p align="center">
-  <a href="#about"><kbd>01 ABOUT</kbd></a> &nbsp;
-  <a href="#selected-work"><kbd>02 PROJECTS</kbd></a> &nbsp;
-  <a href="#toolkit"><kbd>03 TOOLKIT</kbd></a> &nbsp;
-  <a href="#activity"><kbd>04 ACTIVITY</kbd></a> &nbsp;
-  <a href="#credentials"><kbd>05 CREDENTIALS</kbd></a>
+  <a href="#user-content-about"><kbd>01 ABOUT</kbd></a> &nbsp;
+  <a href="#user-content-selected-work"><kbd>02 PROJECTS</kbd></a> &nbsp;
+  <a href="#user-content-toolkit"><kbd>03 TOOLKIT</kbd></a> &nbsp;
+  <a href="#user-content-activity"><kbd>04 ACTIVITY</kbd></a> &nbsp;
+  <a href="#user-content-credentials"><kbd>05 CREDENTIALS</kbd></a>
 </p>
 
 <p align="center">
@@ -16,13 +16,15 @@
   <a href="https://github.com/varshith84?tab=repositories">All repositories ↗</a>
 </p>
 
-<a name="about"></a>
+<a id="about"></a>
+
 <picture>
   <source media="(max-width: 640px)" srcset="assets/about-mobile.svg" />
   <img src="assets/about.svg" width="100%" alt="Hello, I'm Varshith: final-year Computer Science and Engineering student at KL University with 8.72 CGPA. I build full-stack applications and applied AI projects, strengthen Python, SQL, DSA, and OOP foundations, and seek an entry-level software engineering role." />
 </picture>
 
-<a name="selected-work"></a>
+<a id="selected-work"></a>
+
 <picture>
   <source media="(max-width: 640px)" srcset="assets/work-heading-mobile.svg" />
   <img src="assets/work-heading.svg" width="100%" alt="Selected work. Built to be useful. Click a project card to explore its source." />
@@ -56,13 +58,15 @@
   </picture>
 </a>
 
-<a name="toolkit"></a>
+<a id="toolkit"></a>
+
 <picture>
   <source media="(max-width: 640px)" srcset="assets/toolkit-mobile.svg" />
   <img src="assets/toolkit.svg" width="100%" alt="Technical toolkit: Python, Java, SQL, JavaScript, TypeScript; React, HTML/CSS, Vite; Spring Boot, FastAPI, Flask, REST APIs, WebSockets; PyTorch, RAG, LangChain, LangGraph, FAISS, Grad-CAM; MySQL, SQLite, pandas; Git, GitHub, Docker Compose, Postman, VS Code, PyCharm. Core concepts: DSA, OOP, DBMS, operating systems." />
 </picture>
 
-<a name="activity"></a>
+<a id="activity"></a>
+
 <a href="https://github.com/varshith84?tab=overview">
   <picture>
     <source media="(max-width: 640px)" srcset="assets/contributions-mobile.svg" />
@@ -72,7 +76,8 @@
 
 <sub>Calendar cells and activity totals come from GitHub's public contribution calendar. The image displays the last successful refresh; the repository workflow refreshes the snapshot daily.</sub>
 
-<a name="credentials"></a>
+<a id="credentials"></a>
+
 <picture>
   <source media="(max-width: 640px)" srcset="assets/credentials-mobile.svg" />
   <img src="assets/credentials.svg" width="100%" alt="Certifications: Salesforce Certified AI Associate, issued by Salesforce; Cambridge English Linguaskill, an English language proficiency certification." />
